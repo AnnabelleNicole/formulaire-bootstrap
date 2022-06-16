@@ -1,0 +1,18 @@
+
+
+$utilities: (
+    "cursor": (
+        property:cursor,
+        values: auto pointer grab,
+    )
+    );
+
+$utilities: (
+    "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        custom: 30px
+      )
+    ) 
+);

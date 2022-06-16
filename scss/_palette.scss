@@ -1,0 +1,32 @@
+// underscore _palette pour éviter que le fichier soit compilé
+
+
+$customPaleBlue: #E9EEF4;
+$customPaleGrey: #C0C2C4;
+$customPaleBrown: #D2C8D8;
+$customDarkGrey: #464241;
+$customDarkBlue: #7A8187;
+
+$custom-theme-colors:(
+    "paleBlue": $customPaleBlue,
+    "paleGrey": $customPaleGrey,
+    "paleBrown": $customPaleBrown,
+    "darkGrey": $customDarkGrey,
+    "darkBlue": $customDarkBlue
+);
+
+//on merge
+
+$theme-colors: map.merge($custom-theme-colors, $theme-colors);
+
+//pour résoudre bug background et texte
+
+@each $key, $val in $custom-theme-colors {
+    .bg-#{$key} {
+        background-color: $val;
+    }
+    .text-#{$key} {
+        color: $val;
+    }
+}
+//bug fin

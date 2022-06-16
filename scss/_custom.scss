@@ -1,0 +1,30 @@
+//custom css. pour faire de css plus simple sans utiliser une variable
+
+//exemple
+// .cursor-pointer {
+//     cursor:pointer;
+// }
+
+.container-form, button {
+    max-width: 768px!important;
+    margin: 0 auto;
+    }
+    
+button {
+    margin-left: 1%;
+    }
+    
+.text-ss-button {
+    margin-left: 2%;
+    }
+
+    @media screen and (max-width: 768px){
+        .container-form, button {
+            max-width: 500px!important;
+            }
+    }
+    @media screen and (max-width: 500px){
+        .container-form, button {
+            max-width: 300px!important;
+            }
+    }
